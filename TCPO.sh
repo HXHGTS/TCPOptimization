@@ -12,15 +12,15 @@ echo "* hard nofile 65535" >> /etc/security/limits.conf"
 
 echo "正在开启Google BBR. . ."
 
-echo \"net.core.default_qdisc = fq" >> /etc/sysctl.conf
+echo "net.core.default_qdisc = fq" >> /etc/sysctl.conf
     
-echo \"net.ipv4.tcp_congestion_control = bbr" >> /etc/sysctl.conf
+echo "net.ipv4.tcp_congestion_control = bbr" >> /etc/sysctl.conf
 
 sysctl -p
 
-echo \"ulimit -n 65535\" >> /etc/rc.d/rc.local
+echo "ulimit -n 65535" >> /etc/rc.d/rc.local
 
-echo \"ulimit -u 65535\" >> /etc/rc.d/rc.local
+echo "ulimit -u 65535" >> /etc/rc.d/rc.local
     
 chmod +x /etc/rc.d/rc.local
 
