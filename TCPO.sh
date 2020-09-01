@@ -22,7 +22,9 @@ echo "* hard memlock unlimited" >> /etc/security/limits.conf
 
 echo "正在开启Google BBR. . ."
 
-sed -e 'net.core.default_qdisc/d;net.ipv4.tcp_congestion_control/d' /etc/sysctl.conf
+sed -e 'net.core.default_qdisc/d' /etc/sysctl.conf > /etc/sysctl.conf
+
+sed -e 'net.ipv4.tcp_congestion_control/d' /etc/sysctl.conf > /etc/sysctl.conf
 
 echo "net.core.default_qdisc = fq" >> /etc/sysctl.conf
     
@@ -30,7 +32,7 @@ echo "net.ipv4.tcp_congestion_control = bbr" >> /etc/sysctl.conf
 
 sysctl -p
 
-sed -e 'ulimit/d' /etc/rc.d/rc.local
+sed -e 'ulimit/d' /etc/rc.d/rc.local > /etc/rc.d/rc.local
 
 echo "ulimit -n 100001" >> /etc/rc.d/rc.local
 
