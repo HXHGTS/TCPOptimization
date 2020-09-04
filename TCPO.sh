@@ -24,47 +24,11 @@ echo "正在开启Google BBR. . ."
 
 rm -rf /etc/sysctl.conf
 
-echo "net.ipv4.ip_forward = 1" > /etc/sysctl.conf
+sed -e '/net.core.default_qdisc/d;/net.ipv4.tcp_congestion_control/d' /etc/rc.d/rc.local > /etc/sysctl.conf.temp
 
-echo "net.ipv6.conf.all.forwarding = 1" >> /etc/sysctl.conf
+cp -rf /etc/sysctl.conf.temp /etc/sysctl.conf
 
-echo "net.ipv6.conf.default.forwarding = 1" >> /etc/sysctl.conf
-
-echo "net.ipv4.conf.default.rp_filter = 1" >> /etc/sysctl.conf
-
-echo "net.ipv4.conf.default.accept_source_route = 0" >> /etc/sysctl.conf
-
-echo "kernel.core_uses_pid = 1" >> /etc/sysctl.conf
-
-echo "net.ipv4.tcp_syncookies = 1" >> /etc/sysctl.conf
-
-echo "kernel.msgmnb = 65536" >> /etc/sysctl.conf
-
-echo "kernel.msgmax = 65536" >> /etc/sysctl.conf
-
-echo "net.ipv4.conf.all.promote_secondaries = 1" >> /etc/sysctl.conf
-
-echo "net.ipv4.conf.default.promote_secondaries = 1" >> /etc/sysctl.conf
-
-echo "net.ipv6.neigh.default.gc_thresh3 = 4096" >> /etc/sysctl.conf
-
-echo "net.ipv4.neigh.default.gc_thresh3 = 4096" >> /etc/sysctl.conf
-
-echo "kernel.softlockup_panic = 1" >> /etc/sysctl.conf
-
-echo "kernel.sysrq = 1" >> /etc/sysctl.conf
-
-echo "net.ipv6.conf.all.disable_ipv6 = 0" >> /etc/sysctl.conf
-
-echo "net.ipv6.conf.default.disable_ipv6 = 0" >> /etc/sysctl.conf
-
-echo "net.ipv6.conf.lo.disable_ipv6 = 0" >> /etc/sysctl.conf
-
-echo "kernel.numa_balancing = 0" >> /etc/sysctl.conf
-
-echo "kernel.shmmax = 68719476736" >> /etc/sysctl.conf
-
-echo "kernel.printk = 5" >> /etc/sysctl.conf
+rm -rf /etc/sysctl.conf.temp
 
 echo "net.core.default_qdisc = fq" >> /etc/sysctl.conf
 
