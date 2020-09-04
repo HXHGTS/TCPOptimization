@@ -1,6 +1,8 @@
 #!/bin/sh
 
-echo "开始升级. . ."
+clear
+
+echo "开始安装升级必需工具. . ."
 
 yum -y install epel-release
 
@@ -28,6 +30,6 @@ grub2-mkconfig -o /boot/grub2/grub.cfg
 
 echo "正在重启以应用设置. . ."
 
-reboot
-
 echo "正在重启. . ."
+
+reboot
