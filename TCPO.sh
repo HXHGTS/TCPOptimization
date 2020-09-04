@@ -24,7 +24,7 @@ echo "正在开启Google BBR. . ."
 
 rm -rf /etc/sysctl.conf
 
-sed -e '/net.core.default_qdisc/d;/net.ipv4.tcp_congestion_control/d' /etc/rc.d/rc.local > /etc/sysctl.conf.temp
+sed -e '/net.core.default_qdisc/d;/net.ipv4.tcp_congestion_control/d' /etc/sysctl.conf > /etc/sysctl.conf.temp
 
 cp -rf /etc/sysctl.conf.temp /etc/sysctl.conf
 
