@@ -4,6 +4,8 @@ clear
 
 echo "开始安装升级必需工具. . ."
 
+yum -y install deltarpm
+
 yum -y install epel-release
 
 sed -i "0,/enabled=0/s//enabled=1/" /etc/yum.repos.d/epel.repo
