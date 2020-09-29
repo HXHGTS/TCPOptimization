@@ -20,9 +20,9 @@ echo "* hard memlock unlimited" >> /etc/security/limits.conf
 
 echo "正在开启Google BBR. . ."
 
-sysctl -w net.core.default_qdisc=fq
+echo 'net.core.default_qdisc=fq' | tee -a /etc/sysctl.conf
 
-sysctl -w net.ipv4.tcp_congestion_control=bbr
+echo 'net.ipv4.tcp_congestion_control=bbr' | tee -a /etc/sysctl.conf
 
 sysctl -p
 
