@@ -6,6 +6,10 @@ yum remove -y $(rpm -qa | grep kernel | grep -v $(uname -r))
 
 echo "正在优化大文件读写性能. . ."
 
+sed -i '/nofile/d' /etc/security/limits.conf
+
+sed -i '/memlock/d' /etc/security/limits.conf
+
 echo "* soft nofile 100001" > /etc/security/limits.conf
 
 echo "* hard nofile 100002" >> /etc/security/limits.conf
@@ -19,6 +23,10 @@ echo "* soft memlock unlimited" >> /etc/security/limits.conf
 echo "* hard memlock unlimited" >> /etc/security/limits.conf
 
 echo "正在开启Google BBR. . ."
+
+sed -i '/net.core.default_qdisc/d' /etc/sysctl.conf
+
+sed -i '/net.ipv4.tcp_congestion_control/d' /etc/sysctl.conf
 
 echo 'net.core.default_qdisc=fq' | tee -a /etc/sysctl.conf
 
