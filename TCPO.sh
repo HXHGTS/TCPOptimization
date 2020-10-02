@@ -82,6 +82,8 @@ echo 'net.ipv4.tcp_fin_timeout = 5' >> /etc/sysctl.conf
 
 echo 'net.ipv4.tcp_keepalive_time = 30' >> /etc/sysctl.conf
 
+echo 'net.ipv4.tcp_fastopen=3' >> /etc/sysctl.conf
+
 echo 'net.ipv4.ip_local_port_range = 1024 65535' >> /etc/sysctl.conf
 
 echo 'net.core.wmem_default = 8388608' >> /etc/sysctl.conf
