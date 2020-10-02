@@ -6,17 +6,15 @@ yum remove -y $(rpm -qa | grep kernel | grep -v $(uname -r))
 
 echo "正在优化大文件读写性能. . ."
 
-sed -i '/nofile/d' /etc/security/limits.conf
+echo. > /etc/security/limits.conf
 
-sed -i '/memlock/d' /etc/security/limits.conf
+echo "* soft nofile 512000" > /etc/security/limits.conf
 
-echo "* soft nofile 100001" > /etc/security/limits.conf
+echo "* hard nofile 1024000" >> /etc/security/limits.conf
 
-echo "* hard nofile 100002" >> /etc/security/limits.conf
+echo "root soft nofile 512000" >> /etc/security/limits.conf
 
-echo "root soft nofile 100001" >> /etc/security/limits.conf
-
-echo "root hard nofile 100002" >> /etc/security/limits.conf
+echo "root hard nofile 1024000" >> /etc/security/limits.conf
 
 echo "* soft memlock unlimited" >> /etc/security/limits.conf
 
@@ -24,21 +22,33 @@ echo "* hard memlock unlimited" >> /etc/security/limits.conf
 
 echo "正在开启Google BBR. . ."
 
-sed -i '/net.core.default_qdisc/d' /etc/sysctl.conf
+echo. > /etc/sysctl.conf
 
-sed -i '/net.ipv4.tcp_congestion_control/d' /etc/sysctl.conf
+echo 'net.core.default_qdisc=fq' >> /etc/sysctl.conf
 
-echo 'net.core.default_qdisc=fq' | tee -a /etc/sysctl.conf
+echo 'net.ipv4.tcp_congestion_control=bbr' >> /etc/sysctl.conf
 
-echo 'net.ipv4.tcp_congestion_control=bbr' | tee -a /etc/sysctl.conf
+echo 'fs.file-max=1024000' >> /etc/sysctl.conf
+
+echo 'net.core.rmem_max=67108864' >> /etc/sysctl.conf
+
+echo 'net.core.wmem_max=67108864' >> /etc/sysctl.conf
+
+echo 'net.core.rmem_default=65536' >> /etc/sysctl.conf
+
+echo 'net.core.wmem_default=65536' >> /etc/sysctl.conf
+
+echo 'net.core.netdev_max_backlog=4096' >> /etc/sysctl.conf
+
+echo 'net.core.somaxconn=4096' >> /etc/sysctl.conf
 
 sysctl -p
 
-sed -i '/ulimit/d' /etc/rc.d/rc.local
+echo. > /etc/rc.d/rc.local
 
-echo "ulimit -n 100001" >> /etc/rc.d/rc.local
+echo "ulimit -n 512000" >> /etc/rc.d/rc.local
 
-echo "ulimit -u 100001" >> /etc/rc.d/rc.local
+echo "ulimit -u 512000" >> /etc/rc.d/rc.local
     
 chmod +x /etc/rc.d/rc.local
 
