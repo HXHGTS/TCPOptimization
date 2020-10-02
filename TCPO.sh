@@ -6,11 +6,11 @@ yum remove -y $(rpm -qa | grep kernel | grep -v $(uname -r))
 
 echo "正在优化大文件读写性能. . ."
 
-echo "* soft nofile 512000" > /etc/security/limits.conf
+echo "* soft nofile 1024000" > /etc/security/limits.conf
 
 echo "* hard nofile 1024000" >> /etc/security/limits.conf
 
-echo "root soft nofile 512000" >> /etc/security/limits.conf
+echo "root soft nofile 1024000" >> /etc/security/limits.conf
 
 echo "root hard nofile 1024000" >> /etc/security/limits.conf
 
@@ -40,9 +40,9 @@ echo 'net.core.somaxconn=4096' >> /etc/sysctl.conf
 
 sysctl -p
 
-echo "ulimit -n 512000" > /etc/rc.d/rc.local
+echo "ulimit -n 1024000" > /etc/rc.d/rc.local
 
-echo "ulimit -u 512000" >> /etc/rc.d/rc.local
+echo "ulimit -u 1024000" >> /etc/rc.d/rc.local
     
 chmod +x /etc/rc.d/rc.local
 
