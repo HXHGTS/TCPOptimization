@@ -98,7 +98,7 @@ echo 'net.core.somaxconn = 65535' >> /etc/sysctl.conf
 
 sysctl -p
 
-echo. > /etc/rc.d/rc.local
+echo > /etc/rc.d/rc.local
     
 chmod +x /etc/rc.d/rc.local
 
