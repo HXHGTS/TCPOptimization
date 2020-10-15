@@ -7,5 +7,5 @@ yum install wget -y && wget https://github.com/HXHGTS/TCPOptimization/raw/master
 ```
 2.优化性能（需要手动重启）
 ```
-wget https://github.com/HXHGTS/TCPOptimization/raw/master/TCPO.sh -O TCPO.sh&& bash TCPO.sh
+wget https://github.com/HXHGTS/TCPOptimization/raw/master/TCPO.sh -O TCPO.sh&& bash TCPO.sh && rm -f KernelUpdate.sh && rm -f TCPO.sh
 ```
