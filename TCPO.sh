@@ -16,5 +16,7 @@ curl https://raw.githubusercontent.com/HXHGTS/TCPOptimization/master/sysctl.conf
 
 sysctl -p
 
+yum install gcc -y
+
 echo "优化完成!"
 
