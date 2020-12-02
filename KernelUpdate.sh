@@ -22,7 +22,7 @@ yum remove kernel-devel kernel-headers -y
 
 echo "正在安装新内核. . ."
 
-yum --enablerepo=elrepo-kernel install kernel-ml kernel-ml-devel kernel-ml-headers -y
+yum --enablerepo=elrepo-kernel install kernel-ml kernel-ml-devel kernel-ml-headers kernel-ml-tools kernel-ml-doc kernel-ml-tools-libs kernel-ml-tools-libs-devel -y
 
 echo "正在将新内核写入开机引导. . ."
 
