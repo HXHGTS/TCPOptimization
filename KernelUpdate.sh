@@ -18,7 +18,7 @@ yum --disablerepo="*" --enablerepo="elrepo-kernel" list available
 
 echo "正在移除有冲突的旧内核. . ."
 
-yum remove kernel-devel kernel-headers -y
+yum remove kernel-devel kernel-headers kernel-tools kernel-doc kernel-tools-libs kernel-tools-libs-devel -y
 
 echo "正在安装新内核. . ."
 
