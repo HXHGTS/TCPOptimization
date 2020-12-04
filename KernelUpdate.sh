@@ -26,7 +26,7 @@ yum --enablerepo=elrepo-kernel install kernel-ml kernel-ml-devel kernel-ml-heade
 
 echo "正在将新内核写入开机引导. . ."
 
-sed -i "s/GRUB_DEFAULT=saved/GRUB_DEFAULT=0/" /etc/default/grub
+grub2-set-default 0
 
 grub2-mkconfig -o /boot/grub2/grub.cfg
 
