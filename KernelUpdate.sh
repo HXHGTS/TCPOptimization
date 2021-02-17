@@ -33,3 +33,5 @@ grub2-mkconfig -o /boot/grub2/grub.cfg
 echo "正在重启以应用设置. . ."
 
 reboot
+
+exit 0
