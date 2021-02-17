@@ -16,6 +16,8 @@ curl https://cdn.jsdelivr.net/gh/HXHGTS/TCPOptimization/sysctl.conf > /etc/sysct
 
 sysctl -p
 
+yum update -y
+
 yum install gcc -y
 
 echo "优化完成!"
