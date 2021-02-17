@@ -10,8 +10,6 @@ curl https://cdn.jsdelivr.net/gh/HXHGTS/TCPOptimization/limits.conf > /etc/secur
 
 echo "正在开启Google BBR. . ."
 
-echo "正在优化文件io性能. . ."
-
 curl https://cdn.jsdelivr.net/gh/HXHGTS/TCPOptimization/sysctl.conf > /etc/sysctl.conf
 
 sysctl -p
@@ -21,4 +19,6 @@ yum update -y
 yum install gcc -y
 
 echo "优化完成!"
+
+exit 0
 
