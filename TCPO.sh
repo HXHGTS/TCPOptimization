@@ -10,6 +10,8 @@ curl https://cdn.jsdelivr.net/gh/HXHGTS/TCPOptimization/limits.conf > /etc/secur
 
 echo "正在开启Google BBR. . ."
 
+MaxExpectedPathBDP=16777216
+
 curl https://cdn.jsdelivr.net/gh/HXHGTS/TCPOptimization/sysctl.conf > /etc/sysctl.conf
 
 sysctl -p
