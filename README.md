@@ -1,6 +1,6 @@
 # TCPOptimization
 
-升级Linux Kernel，开启cake+bbr
+升级Linux Kernel，开启fq+bbr
 
 1.升级Linux内核(触发重启)
 
