@@ -10,7 +10,13 @@
 `CentOS8:`
 `curl -sSL https://cdn.jsdelivr.net/gh/HXHGTS/TCPOptimization/KernelUpdate8.sh | sh`
 
+`Debian8:`
+`curl -sSL https://cdn.jsdelivr.net/gh/HXHGTS/TCPOptimization/KernelUpdate_debian8.sh | sh`
+
 2.优化性能（升级后内核不稳定，需要手动重启）
 
+`CentOS7/8:`
 `curl -sSL https://cdn.jsdelivr.net/gh/HXHGTS/TCPOptimization/TCPO.sh | sh`
 
+`Debian:`
+`curl -sSL https://cdn.jsdelivr.net/gh/HXHGTS/TCPOptimization/TCPO_debian.sh | sh`
