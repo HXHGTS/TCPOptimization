@@ -4,6 +4,12 @@ echo "正在移除旧内核. . ."
 
 yum remove -y $(rpm -qa | grep kernel | grep -v $(uname -r))
 
+echo "正在校准时间. . ."
+
+yum install -y ntpdate
+
+ntpdate -u time.windows.com
+
 echo "正在优化大文件读写性能. . ."
 
 curl https://cdn.jsdelivr.net/gh/HXHGTS/TCPOptimization/limits.conf > /etc/security/limits.conf
