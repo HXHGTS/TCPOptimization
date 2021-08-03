@@ -6,6 +6,12 @@ apt install byobu -y
 
 purge-old-kernels --keep 1
 
+echo "正在校准时间. . ."
+
+yum install -y ntpdate
+
+ntpdate -u time.windows.com
+
 echo "正在优化大文件读写性能. . ."
 
 curl https://cdn.jsdelivr.net/gh/HXHGTS/TCPOptimization/limits.conf > /etc/security/limits.conf
