@@ -16,6 +16,8 @@ apt update
 
 apt install -y build-essential
 
+apt-get install -y linux-headers-$(uname -r)
+
 echo "优化完成!"
 
 exit 0
