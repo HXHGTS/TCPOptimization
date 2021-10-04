@@ -18,8 +18,8 @@
 `CentOS7/8:`
 `curl -sSL https://cdn.jsdelivr.net/gh/HXHGTS/TCPOptimization/TCPO.sh | sh`
 
-`Debian:`
+`Debian8:`
 `curl -sSL https://cdn.jsdelivr.net/gh/HXHGTS/TCPOptimization/TCPO_debian.sh | sh`
 
-`Debian10:`
+`Debian9/10:`
 `curl -sSL https://cdn.jsdelivr.net/gh/HXHGTS/TCPOptimization/TCPO_debian10.sh | sh`
