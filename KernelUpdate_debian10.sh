@@ -8,6 +8,4 @@ apt-get upgrade -y
 
 apt-get dist-upgrade -y
 
-echo 重启. . .
-
-reboot
+echo 脚本执行完成,请手动重启服务器!
