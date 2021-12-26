@@ -15,8 +15,11 @@
 
 2.优化性能
 
-`CentOS7/8:`
+`CentOS7:`
 `curl -sSL https://cdn.jsdelivr.net/gh/HXHGTS/TCPOptimization/TCPO.sh | sh`
+
+`CentOS8:`
+`curl -sSL https://cdn.jsdelivr.net/gh/HXHGTS/TCPOptimization/TCPO_centos8.sh | sh`
 
 `Debian8:`
 `curl -sSL https://cdn.jsdelivr.net/gh/HXHGTS/TCPOptimization/TCPO_debian.sh | sh`
