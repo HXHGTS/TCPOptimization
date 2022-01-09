@@ -4,6 +4,8 @@ echo "正在卸载系统软件. . ."
 
 apt-get autoremove -y
 
+apt install -y build-essential
+
 echo "正在优化大文件读写性能. . ."
 
 curl https://cdn.jsdelivr.net/gh/HXHGTS/TCPOptimization/limits.conf > /etc/security/limits.conf
