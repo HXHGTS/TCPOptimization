@@ -16,9 +16,9 @@ apt update
 
 apt install -y build-essential
 
-apt -t buster-backports install linux-image-cloud-amd64
+apt -t bullseye-backports install linux-image-cloud-amd64 -y
 
-apt -t buster-backports install linux-headers-cloud-amd64
+apt -t bullseye-backports install linux-headers-cloud-amd64 -y
 
 update-grub
 
