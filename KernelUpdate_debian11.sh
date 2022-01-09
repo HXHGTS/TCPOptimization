@@ -1,4 +1,3 @@
-
 #!/bin/sh
 
 echo 正在升级内核. . .
@@ -11,4 +10,16 @@ apt-get upgrade -y
 
 apt-get dist-upgrade -y
 
-echo 脚本执行完成,请手动重启服务器!
+echo "正在升级系统软件. . ."
+
+apt install -y build-essential
+
+apt -t bullseye-backports install linux-image-cloud-amd64 -y
+
+apt -t bullseye-backports install linux-headers-cloud-amd64 -y
+
+update-grub
+
+echo 脚本执行完成,正在重启服务器. . .
+
+reboot
