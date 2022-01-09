@@ -12,7 +12,7 @@ sysctl -p
 
 echo "正在升级系统软件. . ."
 
-apt update
+apt update -y
 
 apt install -y build-essential
 
