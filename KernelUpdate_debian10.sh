@@ -10,7 +10,7 @@ apt -t buster-backports install linux-headers-cloud-amd64 -y
 
 apt install -y grub2
 
-update-grub
+update-grub2
 
 echo 脚本执行完成,正在重启服务器. . .
 
