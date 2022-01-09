@@ -2,15 +2,7 @@
 
 echo 正在升级内核. . .
 
-echo "deb http://deb.debian.org/debian stretch-backports main" >> /etc/apt/sources.list.d/backports.list
-
-apt-get update -y
-
-apt-get upgrade -y
-
-apt-get dist-upgrade -y
-
-echo "正在升级系统软件. . ."
+echo "deb http://deb.debian.org/debian stretch-backports main" > /etc/apt/sources.list.d/backports.list
 
 apt -t stretch-backports install linux-image-cloud-amd64 -y
 
