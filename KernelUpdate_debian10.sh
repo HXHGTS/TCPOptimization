@@ -2,6 +2,8 @@
 
 echo 正在升级内核. . .
 
+echo "deb http://deb.debian.org/debian buster-backports main" >> /etc/apt/sources.list.d/backports.list
+
 apt-get update -y
 
 apt-get upgrade -y
