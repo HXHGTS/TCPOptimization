@@ -8,7 +8,9 @@ apt -t bullseye-backports install linux-image-cloud-amd64 -y
 
 apt -t bullseye-backports install linux-headers-cloud-amd64 -y
 
-update-grub
+apt install -y grub2
+
+update-grub2
 
 echo 脚本执行完成,正在重启服务器. . .
 
