@@ -42,7 +42,3 @@
 `Debian11:`
 `curl -sSL https://cdn.jsdelivr.net/gh/HXHGTS/TCPOptimization/TCPO_debian11.sh | sh`
 
-3.卸载旧内核(debian9以上需要此步骤,第2步完成需要手动重启)
-```
-apt-get autoremove -y
-```
