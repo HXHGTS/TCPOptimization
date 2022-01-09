@@ -16,7 +16,11 @@ apt update
 
 apt install -y build-essential
 
-apt-get install -y linux-headers-$(uname -r)
+apt -t buster-backports install linux-image-amd64
+
+apt -t buster-backports install linux-headers-amd64
+
+update-grub
 
 echo "优化完成!"
 
