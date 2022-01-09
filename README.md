@@ -19,6 +19,9 @@
 `Debian10:`
 `curl -sSL https://cdn.jsdelivr.net/gh/HXHGTS/TCPOptimization/KernelUpdate_debian10.sh | sh`
 
+`Debian11:`
+`curl -sSL https://cdn.jsdelivr.net/gh/HXHGTS/TCPOptimization/KernelUpdate_debian11.sh | sh`
+
 2.优化性能
 
 `CentOS7:`
@@ -35,6 +38,9 @@
 
 `Debian10:`
 `curl -sSL https://cdn.jsdelivr.net/gh/HXHGTS/TCPOptimization/TCPO_debian10.sh | sh`
+
+`Debian11:`
+`curl -sSL https://cdn.jsdelivr.net/gh/HXHGTS/TCPOptimization/TCPO_debian11.sh | sh`
 
 3.卸载旧内核(debian9以上需要此步骤,第2步完成需要手动重启)
 ```
