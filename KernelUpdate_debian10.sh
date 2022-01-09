@@ -12,8 +12,6 @@ apt-get dist-upgrade -y
 
 echo "正在升级系统软件. . ."
 
-apt install -y build-essential
-
 apt -t buster-backports install linux-image-cloud-amd64 -y
 
 apt -t buster-backports install linux-headers-cloud-amd64 -y
