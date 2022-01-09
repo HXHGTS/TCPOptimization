@@ -4,7 +4,7 @@ clear
 
 echo "开始安装升级必需工具. . ."
 
-yum -y install epel-release
+yum -y install yum-cron epel-release
 
 sed -i "0,/enabled=0/s//enabled=1/" /etc/yum.repos.d/epel.repo
 
