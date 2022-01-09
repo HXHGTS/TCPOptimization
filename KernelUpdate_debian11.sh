@@ -13,3 +13,4 @@ update-grub
 echo 脚本执行完成,正在重启服务器. . .
 
 reboot
+
