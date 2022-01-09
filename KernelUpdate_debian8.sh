@@ -4,6 +4,8 @@ clear
 
 echo "开始安装升级必需工具. . ."
 
+echo "deb http://deb.debian.org/debian jessie-backports main" > /etc/apt/sources.list.d/backports.list
+
 apt update 
 
 apt full-upgrade -y
@@ -11,8 +13,6 @@ apt full-upgrade -y
 apt install lsb-release
 
 echo "正在导入核心安装源. . ."
-
-curl https://raw.githubusercontent.com/HXHGTS/GreatDNS/master/sources.list > /etc/apt/sources.list
 
 apt update
 
