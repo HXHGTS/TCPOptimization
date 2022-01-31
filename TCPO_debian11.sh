@@ -8,7 +8,7 @@ dpkg -l | grep linux-image | awk '{print$2}'
 
 echo ---------------------------------------
 
-echo "多余内核请使用 apt remove --purge 命令卸载!"
+echo "多余内核请使用 apt remove -y --purge 命令卸载!"
 
 apt-get autoremove -y
 
