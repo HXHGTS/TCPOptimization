@@ -20,10 +20,4 @@ sysctl -p
 
 echo "优化完成!"
 
-echo --------------安装结果----------------
-
-sysctl net.ipv4.tcp_congestion_control
-
-echo --------------------------------------
-
 exit 0
