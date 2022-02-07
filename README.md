@@ -42,3 +42,6 @@
 `Debian11:`
 `curl -sSL https://raw.githubusercontent.com/HXHGTS/TCPOptimization/master/TCPO_debian11.sh | sh`
 
+`NO KVM/XEN/VMWARE`
+`curl -sSL https://raw.githubusercontent.com/HXHGTS/TCPOptimization/master/TCPO_Without_KernelUpdate.sh | sh`
+
