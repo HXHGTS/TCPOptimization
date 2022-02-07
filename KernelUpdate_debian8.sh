@@ -4,7 +4,7 @@ clear
 
 echo "开始安装升级必需工具. . ."
 
-echo "deb http://deb.debian.org/debian jessie-backports main" > /etc/apt/sources.list.d/backports.list
+echo "deb http://deb.debian.org/debian jessie-backports main" >> /etc/apt/sources.list.d/backports.list
 
 apt update 
 
