@@ -29,5 +29,3 @@ update-grub
 echo "正在重启以应用设置. . ."
 
 reboot
-
-exit 0
