@@ -2,8 +2,6 @@
 
 echo 正在升级内核. . .
 
-echo > /root/KernelUpdate.sh
-
 echo "deb http://deb.debian.org/debian buster-backports-sloppy main" > /etc/apt/sources.list.d/backports.list
 
 apt -t buster-backports install linux-image-cloud-amd64 -y
