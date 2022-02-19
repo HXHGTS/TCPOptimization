@@ -12,7 +12,7 @@ echo "多余内核请使用 apt remove -y --purge 命令卸载!"
 
 apt-get autoremove -y
 
-apt install -y build-essential
+apt install -y build-essential net-tools iproute2
 
 echo "正在优化大文件读写性能. . ."
 
