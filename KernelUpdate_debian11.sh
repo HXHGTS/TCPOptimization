@@ -2,7 +2,7 @@
 
 echo 正在升级内核. . .
 
-echo "deb http://deb.debian.org/debian bullseye-backports main" >> /etc/apt/sources.list.d/backports.list
+echo "deb http://deb.debian.org/debian bullseye-backports main" > /etc/apt/sources.list.d/backports.list
 
 apt update
 
